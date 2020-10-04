@@ -148,4 +148,17 @@ const checkDisplayContents = (item) => {
 	
   })
 
+  reset.addEventListener('click', function(){
+  	state = {
+	 	left: null,
+	 	operator: null, 
+	 	operatorActive:false, 
+	 	right:0, 
+	 	currentDisplayedNum: 0,
+		currentCalc: 0
+	}
+
+	display.innerText = 0;
+})
+
 
