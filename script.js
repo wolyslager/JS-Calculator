@@ -24,8 +24,8 @@ let currentNumber;
  	"/": function(x, y){return x / y}
  }
 
+//checking to see if opertor is active to react to number entry
  const checkOperator = (item) => {
- 	//if there is an operator active, clear the screen for the upcoming number
  	if (state.operatorActive){
  		display.textContent = item.innerText;
  		state.currentDisplayedNum = display.textContent;
@@ -36,6 +36,7 @@ let currentNumber;
  	}
  }
  
+ //ensuring that the user is only able to enter one decimal per number
  const checkDecimal = (item) => {
  	currentNumber = display.innerText;
 	const hasDecimal = currentNumber.includes('.');
@@ -44,6 +45,7 @@ let currentNumber;
  		}
  }
 
+//checking if it is the first number being entered or not
 const checkDisplayContents = (item) => {
  	const isEmpty = display.innerText ==  0 ? true : false; 
  	if (isEmpty){
@@ -53,15 +55,15 @@ const checkDisplayContents = (item) => {
  	}
  }
 
+//Event listener for all number buttons
  const numbers = document.querySelectorAll('.num').forEach(item => {
 	item.addEventListener('click', function(){
 		checkDisplayContents(item);
  	})
  })
 
-
+//Event listeners for all operators
  add.addEventListener('click', function(){
- 	//case: there is already a state.left.. if there is then we have to 
  	if(state.operator){
  		state.currentCalc = operators[state.operator](Number(state.left), Number(state.currentDisplayedNum));
  		state.operator = '+';
@@ -70,15 +72,12 @@ const checkDisplayContents = (item) => {
  		state.currentCalc = operators[state.operator](Number(state.left), Number(state.currentDisplayedNum));
  	}
  	state.operatorActive = true;
-
  	if(state.left){
  		state.left = state.currentCalc;
  		display.innerText = state.currentCalc;
  	} else {
  		state.left = display.innerText;
  	}
- 	console.log(state.currentCalc);
- 	console.log(state);
  })
 
  subtract.addEventListener('click', function(){
@@ -90,15 +89,12 @@ const checkDisplayContents = (item) => {
  		state.currentCalc = operators[state.operator](Number(state.left), Number(state.currentDisplayedNum));
  	}
  	state.operatorActive = true;
-
  	if(state.left){
  		state.left = state.currentCalc;
  		display.innerText = state.currentCalc;
  	} else {
  		state.left = display.innerText;
  	}
- 	console.log(state.currentCalc);
- 	console.log(state)
  	
  })
 
@@ -111,15 +107,12 @@ const checkDisplayContents = (item) => {
  		state.currentCalc = operators[state.operator](Number(state.left), Number(state.currentDisplayedNum));
  	}
  	state.operatorActive = true;
-
  	if(state.left){
  		state.left = state.currentCalc;
  		display.innerText = state.currentCalc;
  	} else {
  		state.left = display.innerText;
  	}
- 	console.log(state.currentCalc);
- 	console.log(state)
  })
 
   divide.addEventListener('click', function(){
@@ -131,15 +124,12 @@ const checkDisplayContents = (item) => {
  		state.currentCalc = operators[state.operator](Number(state.left), Number(state.currentDisplayedNum));
  	}
  	state.operatorActive = true;
-
  	if(state.left){
  		state.left = state.currentCalc;
  		display.innerText = state.currentCalc;
  	} else {
  		state.left = display.innerText;
  	}
- 	console.log(state.currentCalc);
- 	console.log(state)
  })
 
   equals.addEventListener('click', function(){
