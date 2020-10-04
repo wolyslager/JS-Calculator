@@ -2,9 +2,9 @@
 
 Calculator application built in pure JavaScript, HTML, and CSS 
 
-Try it [here!](https://wolyslager.github.io/digital-clock-app/)
+Try it [here!](https://wolyslager.github.io/calculator-app/)
 
-![alt text](https://github.com/wolyslager/digital-clock-app/blob/master/img/DigitalClockImage.png?raw=true)
+![alt text](https://github.com/wolyslager/calculator-app/blob/master/img/screenshot.png?raw=true)
 
 ## Summary
 This project was interesting and exciting to build because it challenged me to think of creative ways to handle the "state" of the calculations being performed without using plain JavaScript. This project also challenged me to attempt to find elegant solutions to a problem that has several different cases and scenarios. 
