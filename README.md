@@ -2,7 +2,7 @@
 
 Calculator application built in pure JavaScript, HTML, and CSS 
 
-Try it [here!](https://wolyslager.github.io/calculator-app/)
+Try it [here!](https://wolyslager.github.io/JS-Calculator/)
 
 ![](calculator.png?raw=true)
 
